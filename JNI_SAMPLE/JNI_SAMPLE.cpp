@@ -12,6 +12,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	try {
 		jni_util::GetRightJNIEnv((void**)&env);
 	} catch (int e) {
+		if(e == jni_util::JVM_LOAD_ERROR){
+			std::wcout << _T("JVM.dllがロードできません。") << std::endl;
+			std::wcout << _T("JVM.dllのパスの修正が必要です。") << std::endl;
+			std::wcout << _T("x64版の実行にはx64版のJVM.dllのパスが、x86版の実行にはx86版のJVM.dllのパスが必要です。") << std::endl;
+		}
 		return e;
 	}
 

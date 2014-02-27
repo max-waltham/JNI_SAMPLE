@@ -8,6 +8,11 @@
 
 namespace jni_util
 {
+	const int JVM_LOAD_ERROR = -1;
+	const int CREATE_JVM_ERROR = -2;
+	const int NOMEM_ERROR = -3;
+	const int GET_JNIENV_ERROR = -4;
+
 	/**
 	 * スレッドや呼び出し回数に関らず常に正しいJNIEnvを返す。
 	 */

@@ -51,7 +51,7 @@ void CreateSingleJavaVM()
 	tstring jvmDll = _T("C:\\PROGRA~1\\Java\\jdk1.7.0_21\\jre\\bin\\server\\jvm.dll");
 	jvmDllModule = LoadLibrary(jvmDll.c_str());
 	if (jvmDllModule == NULL) {
-		throw - 1;
+		throw jni_util::JVM_LOAD_ERROR;
 	}
 
 	//JNI_CreateJavaVMŠÖ”‚Ì—pˆÓ
@@ -110,7 +110,7 @@ void CreateSingleJavaVM()
 	try {
 		status = createJavaVM(&jvm_1, (void**)&env, &vm_args);
 	} catch (...) {
-		throw - 2;
+		throw jni_util::CREATE_JVM_ERROR;
 	}
 	
 	delete [] options;
@@ -125,9 +125,9 @@ void CreateSingleJavaVM()
 	case JNI_OK:
 		break;
 	case JNI_ERR:
-		throw - 3;
+		throw jni_util::CREATE_JVM_ERROR;
 	case JNI_ENOMEM:
-		throw - 4;
+		throw jni_util::NOMEM_ERROR;
 	}
 }
 
@@ -143,7 +143,7 @@ void jni_util::GetRightJNIEnv(void **penv)
 	if (ret != JNI_OK) {
 		ret = jvm_1->AttachCurrentThread(penv, NULL);
 		if (ret != JNI_OK) {
-			throw - 5;
+			throw jni_util::GET_JNIENV_ERROR;
 		}
 	}
 }
