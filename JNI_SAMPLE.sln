@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JNI_SAMPLE", "JNI_SAMPLE\JNI_SAMPLE.vcxproj", "{C805F21D-5234-4252-BD30-22D25A8167ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JavaManager", "JavaManager\JavaManager.vcxproj", "{0EBDEFBB-FC64-4382-812A-A46A81280975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Debug|Win32.Build.0 = Debug|Win32
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Debug|x64.ActiveCfg = Debug|x64
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Debug|x64.Build.0 = Debug|x64
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Release|Win32.ActiveCfg = Release|Win32
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Release|Win32.Build.0 = Release|Win32
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Release|x64.ActiveCfg = Release|x64
+		{C805F21D-5234-4252-BD30-22D25A8167ED}.Release|x64.Build.0 = Release|x64
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Debug|Win32.Build.0 = Debug|Win32
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Debug|x64.ActiveCfg = Debug|x64
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Debug|x64.Build.0 = Debug|x64
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Release|Win32.ActiveCfg = Release|Win32
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Release|Win32.Build.0 = Release|Win32
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Release|x64.ActiveCfg = Release|x64
+		{0EBDEFBB-FC64-4382-812A-A46A81280975}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
