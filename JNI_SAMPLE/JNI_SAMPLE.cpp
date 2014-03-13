@@ -40,6 +40,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	const jchar* tmp = env->GetStringChars(dateStr, false);
 	std::wcout << (wchar_t*)tmp << std::endl;
 
+	//jstringオブジェクトから取り出したjcharはリリースする
+	env->ReleaseStringChars(dateStr, tmp);
+	//jstringオブジェクトもリリースする
+	env->DeleteLocalRef(dateStr);
+
 	//afterメソッドにnullを渡してNullPointerExceptionを発生させる。
 	jboolean b = env->CallBooleanMethod(obj, mid_after, NULL);
 	if (env->ExceptionCheck()) {
